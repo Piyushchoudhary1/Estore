@@ -17,7 +17,7 @@ namespace EStore.Web.ProductAPI.Controllers
         
 
         // POST: api/products/1
-        public IActionResult CreateProduct(ProductDto productDto) {
+     /*   public IActionResult CreateProduct(ProductDto productDto) {
 
             try
             {
@@ -45,16 +45,8 @@ namespace EStore.Web.ProductAPI.Controllers
 
             return Ok();
         
-        }
+        } */
 
     }
 
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public float Price { get; set; }
-        public string Image { get; set; }
-    }
 }

@@ -6,16 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="wwwroot\ProductContext.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\ProductContext.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="wwwroot\ProductContext.cs" />
-  </ItemGroup>
-
 </Project>
