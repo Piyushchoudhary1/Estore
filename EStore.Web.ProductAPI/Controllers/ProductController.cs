@@ -1,5 +1,7 @@
+using EStore.Web.ProductAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 
@@ -9,43 +11,80 @@ namespace EStore.Web.ProductAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly string connectionString;
-       public ProductsController(IConfiguration configuration)
+        private readonly ProductContext _dbContext;
+       public ProductsController(ProductContext dbContext)
         {
-            connectionString = configuration["ConnectionStrings:DefaultConnection"] ?? "";
+            _dbContext = dbContext;
         }
-        
+
+
+        // GET: api/products
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Product>>> GetAllProducts()
+        {
+
+            if(_dbContext.Products == null) { return NotFound(); }
+
+            return await _dbContext.Products.ToListAsync();
+
+            
+        }
+
+        // GET: api/products/1
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Product>> GetProductById(int id)
+        {
+
+            if (_dbContext.Products == null) { return NotFound(); }
+
+            var product = await _dbContext.Products.FindAsync(id);
+
+            if(product == null) { return NotFound(); };
+
+            return product;
+        }
 
         // POST: api/products/1
-     /*   public IActionResult CreateProduct(ProductDto productDto) {
+        [HttpPost]
 
-            try
-            {
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
+        public async Task<ActionResult<Product>> CreateProduct(Product product)
+        {
+            _dbContext.Products.Add(product);  
+            await _dbContext.SaveChangesAsync();
 
-                    string sql = "INSERT INTO Products" + "(Name, Price, Description, Image)" + "(@Name, @Price, @Description, @Image)";
+            return CreatedAtAction(nameof(GetProductById), new {id = product.Id}, product);
+        }
 
-                    using (var command = new SqlCommand(sql, connection)) {
 
-                        command.Parameters.AddWithValue("@Name", ProductDto.Name);
-                        command.Parameters.AddWithValue("@Price", ProductDto.Price);
-                        command.Parameters.AddWithValue("@Description", ProductDto.Description);
-                        command.Parameters.AddWithValue("@Image", ProductDto.Image);
-                    
-                        command.ExecuteNonQuery();
-                    }
-                }
-            } catch (Exception ex) {
+        // PUT : api/products/1
+       /*   [HttpPut("{id}")]
+        public async Task<ActionResult<Product>> UpdateProductById(int id)
+          {
+              if()
+          } */
 
-                ModelState.AddModelError("Product", "Sorry, but we have an exception");          
-                return BadRequest(ModelState);
-            }
+        // to check availability of a product 
+       /* public bool isProductAvailable(int id)
+        {
+            return (_dbContext.Products?.Any(x => x.Id == id)).GetValueOrDefault();
+        } */
+
+
+        // DELETE : api/products/1
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProductById(int id)
+        {
+
+            var product =await _dbContext.Products.FindAsync(id);
+
+            if(product == null) { return NotFound(); }
+            
+                _dbContext.Products.Remove(product);
+                await _dbContext.SaveChangesAsync();
 
             return Ok();
-        
-        } */
+
+        }
 
     }
 
