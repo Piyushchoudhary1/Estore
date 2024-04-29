@@ -1,5 +1,4 @@
-﻿using System.EStore.Web;
-using System.Web.Mvc;
+﻿using EStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 public class ShoppingCartController : Controller
@@ -19,7 +18,7 @@ public class ShoppingCartController : Controller
     }
 
     // Add item to cart
-    [HttpPost]
+    [HttpGet]
     public ActionResult AddToCart(int itemId)
     {
         // Add logic to add item to the shopping cart
