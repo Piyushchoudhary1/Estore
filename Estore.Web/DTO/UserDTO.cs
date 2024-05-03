@@ -1,6 +1,6 @@
-﻿namespace Estore.Web.Models
+﻿namespace Estore.Web.DTO
 {
-    public class User
+    public class UserDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

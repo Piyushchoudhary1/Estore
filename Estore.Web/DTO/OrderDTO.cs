@@ -1,6 +1,6 @@
-﻿namespace EStore.Web.Models
+﻿namespace EStore.Web.DTO
 {
-    public class OrderItem
+    public class OrderDTO
     {
         public int Id { get; set; }
         public string ProductName { get; set; }

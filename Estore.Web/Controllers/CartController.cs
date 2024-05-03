@@ -1,20 +1,21 @@
-﻿using EStore.Web.Models;
+﻿using EStore.Web.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-public class ShoppingCartController : Controller
+public class CartController : Controller
 {
     // Dummy data for demonstration purposes
-    private List<ShoppingCartItem> dummyItems = new List<ShoppingCartItem>
-    {
-        new ShoppingCartItem { Id = 1, Name = "Product 1", Price = 10.99m, Quantity = 1 },
-        new ShoppingCartItem { Id = 2, Name = "Product 2", Price = 15.99m, Quantity = 2 },
-        new ShoppingCartItem { Id = 3, Name = "Product 3", Price = 20.49m, Quantity = 1 }
-    };
+
 
     // GET: ShoppingCart
     public ActionResult Index()
     {
-        return View(dummyItems);
+           var dummyItems = new List<CartDTO>
+    {
+        new CartDTO { Id = 1, Name = "Product 1", Price = 10.99m, Quantity = 1 },
+        new CartDTO { Id = 2, Name = "Product 2", Price = 15.99m, Quantity = 2 },
+        new CartDTO { Id = 3, Name = "Product 3", Price = 20.49m, Quantity = 1 }
+    };
+        return View("CartView",dummyItems);
     }
 
     // Add item to cart

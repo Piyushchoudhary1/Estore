@@ -1,6 +1,6 @@
-﻿namespace EStore.Web.Models
+﻿namespace EStore.Web.DTO
 {
-    public class ShoppingCartItem
+    public class CartDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
