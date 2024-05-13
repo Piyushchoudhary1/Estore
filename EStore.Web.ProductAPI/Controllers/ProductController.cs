@@ -57,18 +57,38 @@ namespace EStore.Web.ProductAPI.Controllers
 
 
         // PUT : api/products/1
-       /*   [HttpPut("{id}")]
-        public async Task<ActionResult<Product>> UpdateProductById(int id)
+          [HttpPut("{id}")]
+        public async Task<ActionResult<Product>> UpdateProductById(int id, Product product)
           {
-              if()
-          } */
+              if(id != product.Id)
+            {
+                return BadRequest();
+            }
+              _dbContext.Entry(product).State = EntityState.Modified;
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductAvailable(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return Ok();
+          } 
 
         // to check availability of a product 
-       /* public bool isProductAvailable(int id)
+        public bool ProductAvailable(int id)
         {
             return (_dbContext.Products?.Any(x => x.Id == id)).GetValueOrDefault();
-        } */
-
+        } 
+      
 
         // DELETE : api/products/1
         [HttpDelete("{id}")]
