@@ -1,12 +1,11 @@
-﻿using AspNetCore;
-using EStore_frontend.DTO;
+﻿using Estore.Web.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EStore_frontend.Controllers
+namespace Estore.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        public IActionResult Index()
+        public IActionResult AllProducts()
         {
 
             var dummyProducts = new List<ProductDTO>

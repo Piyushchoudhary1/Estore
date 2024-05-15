@@ -1,19 +1,21 @@
-﻿using AspNetCore;
-using EStore_frontend.DTO;
+﻿using Estore.Web.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EStore_frontend.Controllers
+namespace Estore.Web.Controllers
 {
     public class CouponsController : Controller
     {
-        public IActionResult Index()
+        public IActionResult AllCoupons()
         {
             var dummyCoupons = new List<CouponsDTO>
             {
-                new CouponsDTO {CouponID = 1, CouponName = "Coupon1", CouponDescription = "Description1", CouponPrice = 50, MinAmount = 249},
-                new CouponsDTO {CouponID = 2, CouponName = "Coupon2", CouponDescription = "Description2", CouponPrice = 100, MinAmount = 399},
-                new CouponsDTO {CouponID = 3, CouponName = "Coupon3", CouponDescription = "Description3", CouponPrice = 150, MinAmount = 599},
+                new CouponsDTO {CouponID = 1, Name = "Coupon1", Description = "Description1", Price = 50, MinAmount = 249},
+                new CouponsDTO {CouponID = 2, Name = "Coupon2", Description = "Description2", Price = 100, MinAmount = 399},
+                new CouponsDTO {CouponID = 3, Name = "Coupon3", Description = "Description3", Price = 150, MinAmount = 599},
             };
+
+
+         
             return View(dummyCoupons);
         }
     }

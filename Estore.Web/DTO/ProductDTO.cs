@@ -1,5 +1,5 @@
-﻿namespace EStore_frontend.DTO
-{
+﻿namespace Estore.Web.DTO
+{ 
     public class ProductDTO
     {
         public int Id { get; set; }
