@@ -1,0 +1,33 @@
+﻿@model List<ShoppingCartItem>
+
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<h2>Shopping Cart</h2>
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price.ToString("C")</td>
+            <td>@item.Quantity</td>
+            <td>
+                @using (Html.BeginForm("RemoveFromCart", "ShoppingCart"))
+                {
+                    @Html.Hidden("itemId", item.Id)
+                    <button type="submit" class="btn btn-danger">Remove</button>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+
