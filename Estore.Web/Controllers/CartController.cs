@@ -11,10 +11,14 @@ public class CartController : Controller
     {
            var dummyItems = new List<CartDTO>
     {
+
+
         new CartDTO { Id = 1, Name = "Product 1", Price = 10.99m, Quantity = 1 },
         new CartDTO { Id = 2, Name = "Product 2", Price = 15.99m, Quantity = 2 },
         new CartDTO { Id = 3, Name = "Product 3", Price = 20.49m, Quantity = 1 }
     };
+
+        var data = 
         return View("CartView",dummyItems);
     }
 
