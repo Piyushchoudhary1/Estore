@@ -1,8 +1,7 @@
-﻿
-using Estore.Services.ShoppingCartAPI.Models;
+﻿using Estore.CartAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Estore.Services.ShoppingCartAPI.Data
+namespace Estore.Services.ShoppingCartAPI.Models
 {
     public class AppDbContext : DbContext
     {

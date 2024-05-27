@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Estore.Services.ShoppingCartAPI.Models;
-using Estore.Services.ShoppingCartAPI.Models.Dto;
+using Estore.ShoppingCartAPI.Models;
+using Estore.ShoppingCartAPI.Models.Dto;
 
-namespace Estore.Services.ShoppingCartAPI
+namespace Estore.ShoppingCartAPI
 {
     public class MappingConfig
     {

@@ -2,7 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace Estore.Services.ShoppingCartAPI.Extensions
+namespace Estore.ShoppingCartAPI.Extensions
 {
     public static class WebApplicationBuilderExtensions
     {

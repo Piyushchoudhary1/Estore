@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Estore.Services.ShoppingCartAPI.Models.Dto
+namespace Estore.ShoppingCartAPI.Models.Dto
 {
     public class CartHeaderDto
     {

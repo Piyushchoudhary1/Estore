@@ -18,7 +18,6 @@ public class CartController : Controller
         new CartDTO { Id = 3, Name = "Product 3", Price = 20.49m, Quantity = 1 }
     };
 
-        var data = 
         return View("CartView",dummyItems);
     }
 

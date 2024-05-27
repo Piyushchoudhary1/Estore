@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Compile Remove="Models\LoginRequestDto.cs" />
+    <Compile Remove="Models\LoginResponseDto.cs" />
+    <Compile Remove="Models\OrderDetailsDto.cs" />
+    <Compile Remove="Models\OrderHeaderDto.cs" />
+    <Compile Remove="Models\RegisterationRequestDto.cs" />
+    <Compile Remove="Models\StripeRequestDto.cs" />
+    <Compile Remove="Models\UserDto.cs" />
+    <Compile Remove="Service\AuthService.cs" />
+    <Compile Remove="Service\IService\IAuthService.cs" />
+    <Compile Remove="Service\IService\IOrderService.cs" />
+    <Compile Remove="Service\IService\ITokenProvider.cs" />
+    <Compile Remove="Service\OrderService.cs" />
+    <Compile Remove="Service\TokenProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

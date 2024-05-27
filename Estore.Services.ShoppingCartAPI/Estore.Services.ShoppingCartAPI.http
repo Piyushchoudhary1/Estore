@@ -1,6 +1,6 @@
-@Estore.Services.ShoppingCartAPI_HostAddress = http://localhost:5115
+@Estore.ShoppingCartAPI_HostAddress = http://localhost:5115
 
-GET {{Estore.Services.ShoppingCartAPI_HostAddress}}/weatherforecast/
+GET {{Estore.ShoppingCartAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

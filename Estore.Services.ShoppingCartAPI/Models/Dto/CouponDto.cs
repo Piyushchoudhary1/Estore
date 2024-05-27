@@ -1,4 +1,4 @@
-﻿namespace Estore.Services.ShoppingCartAPI.Models.Dto
+﻿namespace Estore.ShoppingCartAPI.Models.Dto
 {
     public class CouponDto
     {

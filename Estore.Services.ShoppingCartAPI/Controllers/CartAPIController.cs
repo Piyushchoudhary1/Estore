@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using Estore.Services.ShoppingCartAPI.Data;
 using Estore.Services.ShoppingCartAPI.Models;
-using Estore.Services.ShoppingCartAPI.Models.Dto;
+using Estore.ShoppingCartAPI.Models;
+using Estore.ShoppingCartAPI.Models.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.PortableExecutable;
 
-namespace Estore.Services.ShoppingCartAPI.Controllers
+namespace Estore.ShoppingCartAPI.Controllers
 {
     [Route("api/cart")]
     [ApiController]

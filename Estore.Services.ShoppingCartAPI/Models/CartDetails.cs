@@ -1,8 +1,9 @@
-﻿using Estore.Services.ShoppingCartAPI.Models.Dto;
+﻿
+using Estore.ShoppingCartAPI.Models.Dto;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Estore.Services.ShoppingCartAPI.Models
+namespace Estore.ShoppingCartAPI.Models
 {
     public class CartDetails
     {
