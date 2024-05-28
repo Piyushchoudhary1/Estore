@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estore.Services.ShoppingCar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Services.CartAPI", "EStore.Services.CartAPI\EStore.Services.CartAPI.csproj", "{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Services.OrdersAPI", "EStore.Services.OrdersAPI\EStore.Services.OrdersAPI.csproj", "{2C0A6B97-08C0-447A-B28E-5268EBBED402}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0A6B97-08C0-447A-B28E-5268EBBED402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0A6B97-08C0-447A-B28E-5268EBBED402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0A6B97-08C0-447A-B28E-5268EBBED402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0A6B97-08C0-447A-B28E-5268EBBED402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

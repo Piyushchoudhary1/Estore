@@ -16,9 +16,7 @@
     <Compile Remove="Models\UserDto.cs" />
     <Compile Remove="Service\AuthService.cs" />
     <Compile Remove="Service\IService\IAuthService.cs" />
-    <Compile Remove="Service\IService\IOrderService.cs" />
     <Compile Remove="Service\IService\ITokenProvider.cs" />
-    <Compile Remove="Service\OrderService.cs" />
     <Compile Remove="Service\TokenProvider.cs" />
   </ItemGroup>
 

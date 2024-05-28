@@ -41,11 +41,6 @@ namespace EStore.Web.ProductAPI.Controllers
             return _response;
         }
 
-
-
-
-
-
         [HttpGet]
         [Route("{id:int}")]
         public ResponseDto Get(int id)

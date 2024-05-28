@@ -1,9 +1,10 @@
 ﻿using Estore.Web.Models;
-using Estore.Web.Models.Dto;
 using Estore.Web.Service.IService;
 using Estore.Web.Utility;
+using EStore.Web.Service.IService;
+using Estore.Web.Models.Dto;
 
-namespace Estore.Web.Service
+namespace EStore.Web.Service
 {
     public class OrderService : IOrderService
     {
@@ -63,14 +64,14 @@ namespace Estore.Web.Service
             });
         }
 
-        public async Task<ResponseDto?> ValidateStripeSession(int orderHeaderId)
-        {
-            return await _baseService.SendAsync(new RequestDto()
-            {
-                ApiType = SD.ApiType.POST,
-                Data = orderHeaderId,
-                Url = SD.OrderAPIBase + "/api/order/ValidateStripeSession"
-            });
-        }
+        //public async Task<ResponseDto?> ValidateStripeSession(int orderHeaderId)
+        //{
+        //    return await _baseService.SendAsync(new RequestDto()
+        //    {
+        //        ApiType = SD.ApiType.POST,
+        //        Data = orderHeaderId,
+        //        Url = SD.OrderAPIBase + "/api/order/ValidateStripeSession"
+        //    });
+        //}
     }
 }

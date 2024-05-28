@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using EStore.Services.CouponAPI.Models;
-using EStore.Services.CouponAPI.Models.Dto;
+using Estore.CartAPI.Models;
+using Estore.CartAPI.Models.Dto;
 
-namespace EStore.Services.CouponAPI
+namespace EStore.Services.ShoppingCartAPI
 {
     public class MappingConfig
     {
@@ -10,9 +10,9 @@ namespace EStore.Services.CouponAPI
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                config.CreateMap<CouponDto, Coupon>().ReverseMap();
+                config.CreateMap<CartHeader, CartHeaderDto>().ReverseMap();
+                config.CreateMap<CartDetails, CartDetailsDto>().ReverseMap();
             });
-
             return mappingConfig;
         }
     }
