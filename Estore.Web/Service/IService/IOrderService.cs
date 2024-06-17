@@ -1,5 +1,5 @@
-﻿using Estore.Web.Models;
-using Estore.Web.Models.Dto;
+﻿using EStore.Web.Models;
+//using EStore.Web.Models.Dto;
 
 namespace EStore.Web.Service.IService
 {

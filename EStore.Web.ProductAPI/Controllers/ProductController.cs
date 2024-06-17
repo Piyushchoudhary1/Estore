@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace EStore.Web.ProductAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/product")]
     [ApiController]
     public class ProductsController : ControllerBase
     {

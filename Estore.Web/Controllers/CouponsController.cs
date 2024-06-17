@@ -1,7 +1,7 @@
-﻿using Estore.Web.DTO;
+﻿using EStore.Web.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Estore.Web.Controllers
+namespace EStore.Web.Controllers
 {
     public class CouponsController : Controller
     {

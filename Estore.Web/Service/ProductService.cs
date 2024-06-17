@@ -1,10 +1,10 @@
-﻿using Estore.Web.Models;
-using Estore.Web.Models.Dto;
-using Estore.Web.Service.IService;
-using Estore.Web.Utility;
+﻿using EStore.Web.Models;
+//using EStore.Web.Models.Dto;
+using EStore.Web.Service.IService;
+using EStore.Web.Utility;
 //using Polly.CircuitBreaker;
 
-namespace Estore.Web.Service
+namespace EStore.Web.Service
 {
     public class ProductService : IProductService
     {

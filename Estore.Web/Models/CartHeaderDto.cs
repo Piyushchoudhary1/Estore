@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace Estore.Web.Models
+namespace EStore.Web.Models
 {
     public class CartHeaderDto
     {

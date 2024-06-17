@@ -1,15 +1,15 @@
-﻿using Estore.Web.Models;
-using Estore.Web.Models.Dto;
-using Estore.Web.Service.IService;
-using Estore.Web.Utility;
+﻿using EStore.Web.Models;
+//using EStore.Web.Models.Dto;
+using EStore.Web.Service.IService;
+using EStore.Web.Utility;
 using System.Net.Http.Headers;
 using System.Text;
 using Newtonsoft.Json;
-using static Estore.Web.Utility.SD;
+using static EStore.Web.Utility.SD;
 using System.Net.Http;
 using System.Net;
 
-namespace Estore.Web.Service
+namespace EStore.Web.Service
 {
 
     public class BaseService : IBaseService

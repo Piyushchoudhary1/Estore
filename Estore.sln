@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Estore.Services.ShoppingCartAPI", "Estore.Services.ShoppingCartAPI\Estore.Services.ShoppingCartAPI.csproj", "{267C3129-4FEF-472D-9D85-1E012824DE5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Services.CartAPI", "EStore.Services.CartAPI\EStore.Services.CartAPI.csproj", "{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EStore.Services.CartAPI", "EStore.Services.CartAPI\EStore.Services.CartAPI.csproj", "{C567FF25-93E0-4DDE-AEC2-7CC3E1F895D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStore.Services.OrdersAPI", "EStore.Services.OrdersAPI\EStore.Services.OrdersAPI.csproj", "{2C0A6B97-08C0-447A-B28E-5268EBBED402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EStore.Services.OrdersAPI", "EStore.Services.OrdersAPI\EStore.Services.OrdersAPI.csproj", "{2C0A6B97-08C0-447A-B28E-5268EBBED402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

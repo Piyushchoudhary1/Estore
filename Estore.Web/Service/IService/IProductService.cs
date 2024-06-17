@@ -1,7 +1,8 @@
-﻿using Estore.Web.Models;
-using Estore.Web.Models.Dto;
+﻿using EStore.Web.Models;
 
-namespace Estore.Web.Service.IService
+//using EStore.Web.Models.Dto;
+
+namespace EStore.Web.Service.IService
 {
     public interface IProductService
     {

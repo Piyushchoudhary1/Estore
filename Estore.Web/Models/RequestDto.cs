@@ -1,7 +1,7 @@
 ﻿using System.Security.AccessControl;
-using static Estore.Web.Utility.SD;
+using static EStore.Web.Utility.SD;
 
-namespace Estore.Web.Models
+namespace EStore.Web.Models
 {
     public class RequestDto
     {

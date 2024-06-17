@@ -1,8 +1,8 @@
-﻿using Estore.Web.Models;
-using Estore.Web.Service.IService;
-using Estore.Web.Utility;
+﻿using EStore.Web.Models;
 using EStore.Web.Service.IService;
-using Estore.Web.Models.Dto;
+using EStore.Web.Utility;
+using EStore.Web.Service.IService;
+//using EStore.Web.Models.Dto;
 
 namespace EStore.Web.Service
 {

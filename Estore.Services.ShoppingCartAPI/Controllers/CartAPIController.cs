@@ -51,6 +51,24 @@ namespace Estore.ShoppingCartAPI.Controllers
             return _response;
         }
 
+		[HttpPost("ApplyCoupon")]
+		public async Task<object> ApplyCoupon([FromBody] CartDto cartDto)
+		{
+			try
+			{
+				var cartFromDb = await _db.CartHeaders.FirstAsync(u => u.UserId == cartDto.CartHeader.UserId);
+				cartFromDb.CouponCode = cartDto.CartHeader.CouponCode;
+				_db.CartHeaders.Update(cartFromDb);
+				await _db.SaveChangesAsync();
+				_response.Result = true;
+			}
+			catch (Exception ex)
+			{
+				_response.IsSuccess = false;
+				_response.Message = ex.ToString();
+			}
+			return _response;
+		}
 
 
 
@@ -58,8 +76,7 @@ namespace Estore.ShoppingCartAPI.Controllers
 
 
 
-
-        [HttpPost("CartUpsert")]
+		[HttpPost("CartUpsert")]
         public async Task<ResponseDto>  CartUpsert(CartDto cartDto) 
         { 
             try

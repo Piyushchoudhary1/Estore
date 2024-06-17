@@ -1,4 +1,4 @@
-﻿namespace Estore.Web.Utility
+﻿namespace EStore.Web.Utility
 {
     public class SD
     {

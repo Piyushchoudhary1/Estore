@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Estore.Web.Models
+namespace EStore.Web.Models
 {
     public class CouponDto
     {

@@ -1,4 +1,4 @@
-﻿namespace Estore.Web.DTO
+﻿namespace EStore.Web.DTO
     {
     public class CouponsDTO
     {

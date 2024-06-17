@@ -1,5 +1,5 @@
 ﻿
-namespace Estore.Web.Models
+namespace EStore.Web.Models
 {
     public class CartDetailsDto
     {
