@@ -1,0 +1,61 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-header {
+    background: linear-gradient(90deg, #ff523b, #ffd6d6);
+    color: white;
+}
+
+.card-header h3 {
+    font-weight: 700;
+}
+
+.card-body {
+    background-color: #ffd6d6;
+    border-radius: 0 0 15px 15px;
+}
+
+.btn-custom {
+    background-color: #ff523b;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #ff3b2b;
+}
+
+.btn-outline-custom {
+    border-color: #ff523b;
+    color: #ff523b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: #ff523b;
+    color: white;
+}
+
+.product-img {
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+
+.order-total {
+    font-size: 21px;
+    font-weight: 700;
+    color: #444;
+}
+
+.order-discount {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+}

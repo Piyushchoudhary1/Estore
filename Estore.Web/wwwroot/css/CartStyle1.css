@@ -1,0 +1,73 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.border {
+    border: 2px solid #ff523b;
+}
+
+.text-warning {
+    color: #ff523b !important;
+}
+
+.text-primary {
+    color: #444;
+}
+
+.btn-custom {
+    background-color: #ff523b;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-custom:hover {
+        background-color: #e04832;
+    }
+
+.btn-outline-custom {
+    border-color: #ff523b;
+    color: #ff523b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .btn-outline-custom:hover {
+        background-color: #ff523b;
+        color: white;
+    }
+
+.product-name {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+    .product-name:hover {
+        color: #e04832;
+        transform: scale(1.05);
+    }
+
+.card-header {
+    background: #ff523b;
+    color: white;
+}
+
+.card-body {
+    background-color: #ffd6d6;
+}
+
+.card-footer {
+    background-color: #ffd6d6;
+}
+
+.form-control {
+    background-color: #fff;
+    color: #444;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e04832;
+}
