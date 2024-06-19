@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EStore.Web.Models.OrderDto>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+<link rel="stylesheet" href="~/css/OrderStyle.css" />
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="text-white">Orders List</h1>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <div class="row pb-3">
+            <div class="col-6">
+            </div>
+            <div class="col-6 text-end">
+                <a asp-action="CreateOrder" class="btn btn-outline-primary"><i class="bi bi-plus-square"></i> Create New Order</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="all-orders">
+                @foreach (var order in Model)
+                {
+                    <div class="el-common">
+                        <div class="order-header">
+                            <p class="order-number">Order #: @order.OrderId</p>
+                            <p class="order-date">Date: @order.OrderDate.ToString("yyyy-MM-dd")</p>
+                        </div>
+                        <div class="order-details">
+                            <p class="customer-name">Customer: @order.CustomerName</p>
+                            <p class="order-total">
+                                Total: &#8377; <span class='total-span'>@order.TotalAmount</span> INR
+                            </p>
+                        </div>
+                        <div class="order-items">
+                            <h5>Order Items:</h5>
+                            <ul>
+                                @foreach (var item in order.OrderItems)
+                                {
+                                    <li>@item.ProductName - Quantity: @item.Quantity</li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="buttons-container">
+                            <a asp-action="DeleteOrder" asp-route-id="@order.OrderId" class="remove-order button-animate">Delete</a>
+                            <a asp-action="EditOrder" asp-route-id="@order.OrderId" class="update-order button-animate">Edit</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
